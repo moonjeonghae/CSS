@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>picture태그</title>
+    <style>
+        picture > img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <picture>
+        <source srcset="./images/shop-large.jpg" media="(min-width: 1024px)">  <!-- 공간에 맞게 이미지를 변경해주기 위해 사용 --> <!--pc버전-->
+        <source srcset="./images/shop-medium.jpg" media="(min-width: 768px)">  <!--태블릿 버전-->
+        <source srcset="./images/shop-small.jpg" media="(min-width: 320px)">  <!--모바일 버전-->
+        <img src="./images/shop.jpg" alt="shop">  <!-- 필수! -->
+    </picture>
+</body>
+</html>

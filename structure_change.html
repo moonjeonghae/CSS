@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형웹 레이아웃 구조</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        ol,
+        ul {
+            list-style: none;
+        }
+        .wrapper {
+            width: 90%;
+            margin: auto;
+        }
+
+        /* mobile first */
+        .layout {
+            display: flex;
+            flex-direction: column;
+        }
+        .layout > li {
+            width: 100%;
+            padding: 5%;
+        }
+        .layout > li:first-child {background-color: lightpink;}
+        .layout > li:nth-child(2) {background-color: lightskyblue;}
+        .layout > li:nth-child(3) {background-color: lightgreen;}
+        .layout > li:nth-child(4) {background-color: lightsalmon;}
+        .layout > li:last-child {background-color: lightgoldenrodyellow;}
+
+        /* tablet */
+        @media (min-width: 768px) {
+            .layout {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            .layout > li {
+                width: 50%;
+            }
+            .layout > li:last-child {
+                width:100%;
+            }
+        }
+
+        /* pc */
+        @media (min-width: 1024px) {
+            .layout > li {
+                width: 20%;
+            }
+            .layout > li:last-child {
+                width:20%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <section>
+            <ul class="layout">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>

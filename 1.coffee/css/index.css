@@ -1,0 +1,141 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap');
+
+/* 그리드시스템 설정 */
+.container {
+    width: 100%;  /* 모바일과 태블릿의 크기 */
+    max-width: 1024px;  /* PC 크기 */
+    margin: 0 auto;
+}
+
+/*===== header =====*/
+header {
+    width: 100%;
+    height: 300px;
+    background: url(../images/header.jpg) no-repeat left top;
+    background-size: cover;
+}
+h1 {
+    font-size: 0;
+}
+.main-menu {
+    background-color: #000;
+}
+.gnb {
+    display: flex;
+}
+.gnb > li {
+    padding: 20px;
+}
+.gnb > li > a {
+    color: #fff;
+}
+
+
+/*===== main =====*/
+/* section-box */
+.section-box {
+    display: flex;
+    flex-direction: column;  /* 수직 정렬 */
+}
+.section-box > section {
+    width: 100%;
+    padding: 30px;
+    background-color: antiquewhite;
+}
+.section-box > section:nth-child(even) {  /* even은 짝수 odd는 홀수 */
+    background-color: #ccc;
+}
+.section-box .title {
+    margin-bottom: 30px;
+}
+
+/* conbox */
+.conbox > .photo {
+    display: none;
+}
+.conbox > .desc {
+    font-weight: 600;
+}
+.conbox > .icecoffee-desc > h3 {
+    margin-bottom: 10px;
+    color: skyblue;
+}
+.conbox > .icecoffee-desc > ol {
+    list-style-type: decimal;  /* 숫자 타입 */
+    list-style-position: inside; /* 리스트 위치 박스 안으로 */
+    font-size: 0.875rem;  /* 14px */
+}
+.conbox > .icecoffee-desc > ol >li {
+    line-height: 1.8;
+}
+
+/*===== footer =====*/
+footer {
+    width: 100%;
+    height: 100px;
+    background-color: #000;
+}
+footer > h2 {
+    font-family: 'Yeon Sung';
+    color: #fff;
+    text-align: center;
+    line-height: 100px;
+}
+
+
+/********************* tablet 768px *********************/
+@media screen and (min-width: 768px) {
+    header {
+        height: 400px;
+    }
+    /* section-box */
+    .section-box {
+        flex-direction: row;  /* 수직 정렬 */
+        flex-wrap: wrap;
+    }
+    .section-box > section {
+        width: 50%;
+        border: 1px dotted #aaa;
+    }
+    .section-box > section:last-child {
+        width: 100%;
+    }
+}
+
+/********************* pc 1024px *********************/
+@media screen and (min-width: 1024px) {
+    header {
+        height: 500px;
+    }
+    /* section-box */
+    .section-box {
+        flex-direction: column;  /* 수직 정렬 */
+        flex-wrap: nowrap;
+    }
+    .section-box > section {
+        width: 100%;
+        border: 0;
+    }
+    /* conbox */
+    .conbox {
+        display: flex;
+    }
+    .conbox > .photo {
+        display: block;  /* none -> block 안 보이다가 보이게 하기 */
+    }
+    .conbox > .desc {
+        margin: 30px 0 0 30px;
+    }
+    #choice .conbox {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    #choice .conbox > .photo > img {
+        border-radius: 50%;
+    }
+    .conbox > .icecoffee-desc > ol >li {
+        line-height: 2.3;
+    }
+}

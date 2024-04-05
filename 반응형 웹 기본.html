@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 웹 기본</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        h1 {
+            font-size: 5vw;  /* 브라우저 기준에 맞춘 글자 크기 */
+        }
+        .wrapper {
+            display: flex;
+            width: 100%; height: 700px;
+            margin: 0 auto;
+            border: 4px solid tomato;
+        }
+        .wrapper > div {
+            height: inherit;  /* 부모 태그의 세로크기가 기준 상속됨 */
+        }
+
+        /* 모바일 퍼스트 */
+        .left {
+            width: 30%;
+            background-color: lightblue;
+        }
+        .right {
+            width: 70%;
+            background-color: lightgreen;
+        }
+
+        /* 태블릿 버전 */
+        @media all and (min-width: 768px) {  /* 768px 이상 */
+            .left {
+            background-color: lightgoldenrodyellow;
+        }
+        .right {
+            background-color: lightcoral;
+        }
+        }
+
+        /* PC 버전 */
+        @media all and (min-width: 1024px) {  /* 1024px 이상 */
+            .left {
+            background-color: lightcyan;
+        }
+        .right {
+            background-color: lightgray;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="left"></div>
+        <div class="right">
+            <h1>반응형 웹 알아보기</h1>
+        </div>
+    </div>
+</body>
+</html>

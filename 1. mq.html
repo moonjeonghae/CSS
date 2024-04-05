@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미디어쿼리</title>
+    <style>
+        body {  /* pc버전, 1025px ~ */
+            background-image: url(./images/bg0.jpg) no-repeat fixed;
+            background-color: cover;   /* 브라우저의 가로 크기에 이미지 맞춤 */
+        }
+
+        @media screen and (max-width:1024px) {  /* 태블릿 버전, 769px ~ 1024px */
+            body {
+                background-image: url(./images/bg1.jpg) no-repeat fixed;
+            }
+        }
+        
+        @media screen and (max-width:768px) {  /* 모바일 버전, 401px ~ 768px */
+            body {
+                background-image: url(./images/bg2.jpg) no-repeat fixed;
+            }
+        }
+        
+        @media screen and (max-width:400px) {  /* 400px 이하 */
+            body {
+                background-image: url(./images/bg3.jpg) no-repeat fixed;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1></h1>
+</body>
+</html>

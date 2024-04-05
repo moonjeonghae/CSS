@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>루트요소</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html, body {
+            font-size: 16px;
+        }
+        .wrapper {
+            width: 96%;
+            margin: 0 auto;
+            font-size: 12px;
+        }
+        .header-text {
+            font-size: 30px;  /*fluide-text 기준*/
+            text-align: center;
+            color: red;
+        }
+        .fluid-text {
+            font-size: 2em;  /* 60px, header-text가 부모 요소로 기준이 됨 */
+        }
+        .sec-text {
+            font-size: 3rem;  /* 48px, 최상위 요소인 html이 기준이 됨 */
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header-text">
+            <p>가변 그리드 레이아웃</p>
+            <p class="fluid-text">가변 폰트</p>
+        </header>
+        <main>
+            <section>
+                <p class="sec-text">본문 텍스트</p>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
