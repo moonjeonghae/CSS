@@ -4,37 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INDIGO</title>
-    <!-- <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/index.css"> -->
+    <link rel="shortcut icon" href="./images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index2.css">
 </head>
 <body>
     <header>
         <h1 class="logo">INDIGO</h1>
+        <div class="mobile-gnb">
+            <ul>
+                <li class="mobile-menu">&nbsp;</li>
+                <li class="mobile-menu">&nbsp;</li> 
+                <li class="mobile-menu">&nbsp;</li>
+            </ul>
+        </div>
         <nav class="main-menu">
             <div class="container">
-                <ul class="gnb">
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">WE ARE</a></li>
-                    <li><a href="#">WORK</a></li>
-                    <li><a href="#">BLOG</a></li>
-                    <li><a href="#">CONTACT US</a></li>
-                </ul>
+                    <ul class="gnb">
+                        <li class="gnb-list"><a href="#">HOME</a></li>
+                        <li class="gnb-list"><a href="#">WE ARE</a></li>
+                        <li class="gnb-list"><a href="#">WORK</a></li>
+                        <li class="gnb-list"><a href="#">BLOG</a></li>
+                        <li class="gnb-list"><a href="#">CONTACT US</a></li>
+                    </ul>
             </div>  <!--container-->
-        </nav>  <!--main-menu-->
+        </nav>  <!--mainmenu-->
     </header>
 
     <main>
         <article class="slide">
             <h2 class="slide-txt">slide</h2>
             <img src="./images/slide01.jpg" alt="slide img">
-        </article>
+        </article>  <!--slide-->
 
         <section class="we-are">
             <div class="container">
-                <h2 class="title">WE ARE</h2>
-                <p class="we-are-decs">
-                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a<br>piece of classical Latin literature from 45 BC, making it over 2000 years old.
-                </p>
+                <div class="title-desc">
+                    <h2 class="title">WE ARE</h2>
+                    <p class="we-are-decs">
+                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a<br>piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                    </p>
+                </div>
                 <div class="we-are-list">
                     <div class="list">
                         <a href="#">
@@ -79,10 +89,93 @@
                 </div>  <!--we-are-list-->
             </div>  <!--container-->
         </section>  <!--we-are-->
+
+        <section class="work">
+            <div class="contianer">
+                <h2 class="title">WORK</h2>
+            </div>
+            <div class="work-list">
+                <ul>
+                    <li><a href="#"><img src="./images/work01.jpg" alt="work image"></a></li>
+                    <li><a href="#"><img src="./images/work02.jpg" alt="work image"></a></li>
+                    <li><a href="#"><img src="./images/work03.jpg" alt="work image"></a></li>
+                    <li><a href="#"><img src="./images/work04.jpg" alt="work image"></a></li>
+                    <li><a href="#"><img src="./images/work05.jpg" alt="work image"></a></li>
+                    <li><a href="#"><img src="./images/work06.jpg" alt="work image"></a></li>
+                    <li><a href="#"><img src="./images/work07.jpg" alt="work image"></a></li>
+                    <li><a href="#"><img src="./images/work08.jpg" alt="work image"></a></li>
+                </ul>
+            </div>  <!--work-list-->
+            <hr>
+        </section>  <!--work-->
+
+        <section class="blog">
+            <div class="container">
+                <h2 class="title">BLOG</h2>
+                <div class="blog-list">
+                    <div class="list">
+                        <a href="#">
+                            <img src="./images/blog01.jpg" alt="blog">
+                        </a>
+                        <time datetime="2016-10-30">OCT 30, 2016</time>
+                        <p>There are many variations of passages of Lorem Ipsum</p>
+                    </div>
+                    <div class="list">
+                        <a href="#">
+                            <img src="./images/blog02.jpg" alt="blog">
+                        </a>
+                        <time datetime="2016-10-30">OCT 30, 2016</time>
+                        <p>There are many variations of passages of Lorem Ipsum</p>
+                    </div>
+                    <div class="list">
+                        <a href="#">
+                            <img src="./images/blog03.jpg" alt="blog">
+                        </a>
+                        <time datetime="2016-10-30">OCT 30, 2016</time>
+                        <p>There are many variations of passages of Lorem Ipsum</p>
+                    </div>
+                </div>  <!--blog-list-->
+            </div>  <!--container-->
+        </section>  <!--blog-->
+
+        <section class="contact">
+            <div class="container">
+                <div class="title-form">
+                    <h2 class="title">CONTACT</h2>
+                    <form action="#" method="post">
+                        <ul>
+                            <li>
+                                <input type="text" name="user-name" placeholder="Name">
+                            </li>
+                            <li>
+                                <input type="tel" name="phone" placeholder="Phone">
+                            </li>
+                            <li>
+                                <input type="email" name="mail" placeholder="Email Address">
+                            </li>
+                            <li>
+                                <textarea name="message" cols="30" rows="10" placeholder="Message"></textarea>
+                            </li>
+                            <li>
+                                <button>SEND MESSAGE</button>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </div>  <!--container-->
+        </section>  <!--contact-->
+
+        <section class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d143240.6383860661!2d126.82471969045143!3d37.50318109349769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2eb421c44ad%3A0xe955a50c118085f8!2z6rSR7ZmU66y46rSR7J6l!5e0!3m2!1sko!2skr!4v1712547338820!5m2!1sko!2skr"  height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
     </main>
 
     <footer>
-
+        <div class="footerlogo">
+            <div class="container">
+                <p class="footer-logo">INDIGO</p>
+            </div> <!--container-->
+        </div>  <!--footerlogo-->
     </footer>
 </body>
 </html>

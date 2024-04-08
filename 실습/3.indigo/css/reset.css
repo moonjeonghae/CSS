@@ -10,7 +10,7 @@
 html, body {
     font: 16px 'Montserrat';
 }
-ol, ul {
+ol, ul, li {
     list-style: none;
 }
 a {
@@ -42,11 +42,12 @@ h3 {
     font-size: 20px;
 }
 p {
-    font-size: 16px;
+    font-size: 14px;
 }
 header,
 nav,
 main,
+article,
 section,
 footer {
     display: block;
